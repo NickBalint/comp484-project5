@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSUN Map Location Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="top-bar">
+      <h1>CSUN Location Challenge</h1>
+      <p>Double-click where you think each place is located.</p>
+    </header>
+
+    <main class="content-grid">
+      <section class="panel info-panel" aria-label="Game information">
+        <h2>Game Status</h2>
+        <div class="stats-row">
+          <div>
+            <span class="label">Round</span>
+            <strong id="roundCounter">0 / 5</strong>
+          </div>
+          <div>
+            <span class="label">Score</span>
+            <strong id="scoreCounter">0</strong>
+          </div>
+          <div>
+            <span class="label">Time</span>
+            <strong id="timer">00:00</strong>
+          </div>
+        </div>
+
+        <div class="prompt-block">
+          <h3>Find This Location</h3>
+          <p id="targetPrompt">Press Start to begin.</p>
+        </div>
+
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+
+        <div class="button-row">
+          <button id="startButton" type="button">Start Game</button>
+          <button id="restartButton" type="button" class="secondary">Restart</button>
+        </div>
+
+        <div class="high-score">
+          <h3>High Score</h3>
+          <p id="highScoreText">No high score yet.</p>
+        </div>
+
+        <details>
+          <summary>How to run</summary>
+          <ol>
+            <li>Copy <code>local-config.example.js</code> to <code>local-config.js</code>.</li>
+            <li>Add your Google Maps API key in <code>local-config.js</code>.</li>
+            <li>Open this page in Chrome.</li>
+            <li>Click Start and answer 5 locations by double-clicking the map.</li>
+          </ol>
+        </details>
+      </section>
+
+      <section class="panel map-panel" aria-label="Map area">
+        <div id="map" role="application" aria-label="CSUN map"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="local-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
