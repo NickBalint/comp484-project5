@@ -1,3 +1,6 @@
+## Live Site
+[View the live site here](https://NickBalint.github.io/comp484-project5)
+
 # CSUN Map Location Quiz
 
 This project is a Google Maps JavaScript game where the player double-clicks locations on the CSUN map.
