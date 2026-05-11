@@ -2,34 +2,34 @@ const TOTAL_ROUNDS = 5;
 const ANSWER_RADIUS_METERS = 90;
 const STORAGE_KEY = "csunMapGameHighScore";
 
-const csunCenter = { lat: 34.2406, lng: -118.5291 };
+const csunCenter = { lat: 34.239970028779126, lng: -118.52737768465488 };
 
 // Includes 4 custom picks and 1 required location from the assignment prompt.
 const LOCATIONS = [
   {
-    name: "Oviatt Library",
-    lat: 34.240005,
-    lng: -118.528623
+    name: "CSUN University Library",
+    lat: 34.24005510816188,
+    lng: -118.52910731813878
   },
   {
     name: "Student Recreation Center",
-    lat: 34.245282,
-    lng: -118.525998
+    lat: 34.24001878357156,
+    lng: -118.5248991453873
   },
   {
     name: "University Student Union",
-    lat: 34.242431,
-    lng: -118.528252
+    lat: 34.24022937505001,
+    lng: -118.52631931335615
   },
   {
     name: "Sierra Tower",
-    lat: 34.239752,
-    lng: -118.531704
+    lat: 34.23904459863166,
+    lng: -118.53023218956889
   },
   {
     name: "Alumni Relations, Reseda Annex - A4",
-    lat: 34.24009396929945,
-    lng: -118.53587673189622
+    lat: 34.240058491733684,
+    lng: -118.53555486680762
   }
 ];
 
@@ -60,7 +60,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: csunCenter,
     zoom: 16,
-    mapTypeId: "roadmap",
+    mapTypeId: "satellite",
     disableDefaultUI: true,
     disableDoubleClickZoom: true,
     draggable: false,
